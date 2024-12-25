@@ -23,11 +23,12 @@ let player;
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
         videoId: 'o6wJSwbKbds',
+        height: '0',
+        width: '0',
         playerVars: {
-            'autoplay': 1,
-            'controls': 1,
-            'playsinline': 1,
-            'enablejsapi': 1
+            'autoplay': 0,
+            'controls': 0,
+            'volume': 30  // Set volume to 50%
         },
         events: {
             'onReady': onPlayerReady
@@ -36,9 +37,5 @@ function onYouTubeIframeAPIReady() {
 }
 
 function onPlayerReady(event) {
-    document.addEventListener('click', function() {
-        event.target.playVideo();
-        event.target.unMute();
-        event.target.setVolume(50);
-    }, { once: true });
+    player.playVideo();
 }
