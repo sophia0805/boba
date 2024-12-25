@@ -191,9 +191,3 @@ img {
     transform: translateX(30%) translateY(70%);
     bottom: 20%;
 }
-
-iframe {
-    display: none;
-    height: 0px;
-    width: 0px;
-}
