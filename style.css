@@ -192,3 +192,6 @@ img {
     bottom: 20%;
 }
 
+.videoContainer {
+    display: none;
+}
