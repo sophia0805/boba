@@ -192,6 +192,8 @@ img {
     bottom: 20%;
 }
 
-.videoContainer {
+iframe {
     display: none;
+    height: 0px;
+    width: 0px;
 }
