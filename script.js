@@ -36,7 +36,6 @@ function onYouTubeIframeAPIReady() {
 }
 
 function onPlayerReady(event) {
-    // Need user interaction first
     document.addEventListener('click', function() {
         event.target.playVideo();
         event.target.unMute();
