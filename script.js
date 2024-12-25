@@ -12,7 +12,4 @@ globe.addEventListener('click', function() {
     globeElement.classList.remove('snow-active');
     void globeElement.offsetWidth;
     globeElement.classList.add('snow-active');
-
-
-
 });
