@@ -1,0 +1,193 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #1a472a, #2d5a40);
+    font-family: Arial, sans-serif;
+}
+
+.snowGlobe {
+    position: relative;
+    width: 40vh;
+    height: 40vh;
+    cursor: pointer;
+}
+
+.globe {
+    position: absolute;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    box-shadow:
+        inset 0 0 50px rgba(255, 255, 255, 0.1),
+        0 0 50px rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+}
+
+.base {
+    position: absolute;
+    width: 7vw;
+    height: 7vh;
+    background: linear-gradient(#8b4513, #654321);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    left: 35%;
+    bottom: -15%;
+}
+
+.snowPile {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background: #fff;
+    border-radius: 0 0 100px 100px;
+
+}
+
+.fallingSnowWrap {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.flakes {   
+    width: 400px;
+    height: 800px;
+    position: absolute;
+    top: -400px;
+    color: #fff;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(0);
+}
+
+@keyframes snowfall {
+    0% { 
+        opacity: 1;
+        transform: translateY(0); 
+    }
+    90% {
+        opacity: 1;
+    }
+    100% { 
+        opacity: 0;
+        transform: translateY(400px); 
+    }
+}
+
+.globe.snow-active .flakes1 {
+    animation: snowfall 30s linear;
+}
+
+.globe.snow-active .flakes2 {
+    animation: snowfall 15s linear;
+}
+
+.flakes1 {
+    opacity: 0.5;
+    transform: translateY(-400px);
+}
+
+.flakes2 {
+    opacity: 0.7;
+    transform: translateY(-400px);
+}
+
+.snowGlobe.shaking {
+    animation: shake 1s linear;
+}
+@keyframes snowfall1 {
+    from { transform: translateY(-400px); }
+    to { transform: translateY(100px); }
+}
+@keyframes snowfall2 {
+    from { transform: translateY(-400px); }
+    to { transform: translateY(100px); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(-10px, -10px) rotate(-5deg); }
+    50% { transform: translate(10px, 10px) rotate(5deg); }
+    75% { transform: translate(-10px, 10px) rotate(-5deg); }
+}
+
+
+.flakes1::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 
+        303px 117px 0 0 #fff,
+        32px 89px 0 0 #fff,
+        323px 119px 0 0 #fff,
+        98px 183px 0 0 #fff,
+        126px 235px 0 0 #fff,
+        380px 61px 0 0 #fff,
+        269px 17px 0 0 #fff,
+        121px 344px 0 0 #fff,
+        229px 136px 0 0 #fff,
+        237px 280px 0 0 #fff,
+        303px 30px 0 0 #fff,
+        303px 517px 0 0 #fff,
+        32px 489px 0 0 #fff,
+        323px 519px 0 0 #fff,
+        98px 583px 0 0 #fff,
+        126px 635px 0 0 #fff,
+        380px 461px 0 0 #fff,
+        269px 417px 0 0 #fff,
+        121px 744px 0 0 #fff,
+        229px 536px 0 0 #fff,
+        237px 680px 0 0 #fff,
+        303px 430px 0 0 #fff;
+}
+
+.flakes2::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 
+        375px 85px 0 0 #fff,
+        11px 289px 0 0 #fff,
+        254px 384px 0 0 #fff,
+        5px 286px 0 0 #fff,
+        266px 305px 0 0 #fff,
+        388px 298px 0 0 #fff,
+        180px 307px 0 0 #fff,
+        74px 295px 0 0 #fff,
+        238px 290px 0 0 #fff,
+        384px 235px 0 0 #fff,
+        131px 350px 0 0 #fff,
+        375px 485px 0 0 #fff,
+        11px 689px 0 0 #fff,
+        254px 784px 0 0 #fff,
+        5px 686px 0 0 #fff,
+        266px 705px 0 0 #fff,
+        388px 698px 0 0 #fff,
+        180px 707px 0 0 #fff,
+        74px 695px 0 0 #fff,
+        238px 690px 0 0 #fff,
+        384px 635px 0 0 #fff,
+        131px 750px 0 0 #fff;
+}
+
+
+img {
+    width: 60%;
+    transform: translateX(30%) translateY(70%);
+    bottom: 20%;
+}
