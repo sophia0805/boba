@@ -191,3 +191,15 @@ img {
     transform: translateX(30%) translateY(70%);
     bottom: 20%;
 }
+
+p {
+    color: white;
+    font-size: 20px;
+    display: absolute;
+}
+
+.text{
+    height: 5vh;
+    position: absolute;
+    top: 2vh;
+}
