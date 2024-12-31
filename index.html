@@ -9,7 +9,6 @@
     <title>Christmas Boba Drops!</title>
 </head>
 <body>
-    <div class="text"><p>Click on the snow globe! (volume on)</p></div>
     <div id="player" style="display: none;"></div>
     <div class="snowGlobe" id="snowGlobe">
         <div class="globe">
@@ -21,6 +20,18 @@
             <img src="https://cloud-8gvygb20i-hack-club-bot.vercel.app/0image.png"\>
         </div>
         <div class="base"></div>
+    </div>
+    <div class="countdown">
+        <h2>Time Until New Years:</h2>
+        <div id="countdown-timer"></div>
+    </div>
+    <div class="wishlist">
+        <h2>Christmas Wishlist</h2>
+        <div class="wishlist-form">
+            <input type="text" id="wishInput" placeholder="Add your wish...">
+            <button class="btn" onclick="addWish()">Add Wish</button>
+        </div>
+        <div id="wishlist-items"></div>
     </div>
     <script src="script.js"></script>
 </body>
